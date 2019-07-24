@@ -225,7 +225,7 @@ function writeContent(fileName) {
 
 
 function addStandardTable() {
-        writeContent('../../OOXMLFragments/StandardTable.xml');
+        writeContent('https://khalidk7.github.io/SimpleDialogSampleWeb/OOXMLFragments/StandardTable.xml');
 }
 
 
@@ -522,10 +522,13 @@ function setRangeStyle(event) {
         range.style = styleName;
 
         return context.sync().then(function () {
+            showNotification('Setting style: ' + styleName);
             console.log('Setting style: ' + styleName);
         });
     })
         .catch(function (error) {
+            showNotification('Error: ' + JSON.stringify(error));
+
             console.log('Error: ' + JSON.stringify(error));
             if (error instanceof OfficeExtension.Error) {
                 console.log('Debug info: ' + JSON.stringify(error.debugInfo));
