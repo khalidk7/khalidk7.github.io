@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+4  See LICENSE in the project root for license information -->
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Word Add-In with Commands Sample</title>
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.1.min.js"></script>
+    <script src="Scripts/FabricUI/message.banner.js" type="text/javascript"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+
+    <script src="https://agave.azurewebsites.net/Fabric/components/NavBar/Jquery.NavBar.js"></script>
+
+    <script src="Taskpane.js" type="text/javascript"></script>
+
+    <!--Helper file to use Dialog API-->
+    <script src="DialogHelper.js" type="text/javascript"></script>
+
+    <!-- For the Office UI Fabric, go to http://aka.ms/office-ui-fabric to learn more. -->
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css">
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css">
+
+    <link href="message.banner.css" rel="stylesheet" type="text/css" />
+    <link href="Taskpane.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <!-- Message banner -->
+    <div class="ms-MessageBanner">
+        <div class="ms-MessageBanner-content">
+            <div class="ms-MessageBanner-text">
+                <div class="ms-MessageBanner-clipper">
+                    <span class="ms-font-m ms-fontWeight-semilight" id="notificationBody"></span>
+                </div>
+            </div>
+            <button class="ms-MessageBanner-expand"> <i class="ms-Icon ms-Icon--chevronsDown"></i> </button>
+        </div>
+        <button class="ms-MessageBanner-close"> <i class="ms-Icon ms-Icon--x"></i> </button>
+    </div>
+
+    <!--<div id="content-header">
+        <div class="paddingSmall">
+            <h1 class="ms-font-xl ms-fontColor-white">CRS AP Tools</h1>
+        </div>
+    </div>-->
+
+    <div id="content-main">
+
+        <div class="ms-NavBar">
+            <div class="ms-NavBar-openMenu js-openMenu">
+                <i class="ms-Icon ms-Icon--menu"></i>
+            </div>
+            <ul class="ms-NavBar-items">
+                <li class="ms-NavBar-item" id="docGen">Formatting</li>
+                <li class="ms-NavBar-item" id="teamBuilder">Tables/Figures</li>
+            </ul>
+        </div>
+
+        <div class="padding">
+
+            <div id="tbPanel">
+                <div id="team">
+                </div>
+            </div>
+
+            <div id="sowPanel" class="display:none">
+
+                <!--<button class="ms-Button ms-Button--primary" id="action-button">
+        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+        <span class="ms-Button-label" id="button-text"></span>
+        <span class="ms-Button-description" id="button-desc"></span>
+    </button>-->
+
+                <button class="ms-Button ms-Button--primary" id="btnNewCRSReport">
+                    <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+                    <span class="ms-Button-label" id="btnNewCRSReport-text">New CRS Insight</span>
+                    <span class="ms-Button-description" id="btnNewCRSReport-desc">New CRS Insight</span>
+                </button>
+
+                <br /><br />
+                <input id="btnAddAuthors" type="image" src="Images/image_002.png" alt="Edit authors">
+                <!--<button id="btnAddAuthors">Add Authors</button>-->
+                <br /><br />
+                <input id="btnInsertLISRef" type="image" src="Images/image_026.png" alt="Add LIS reference">
+                <input id="btnInsertCRSRef" type="image" src="Images/image_027.png" alt="Add CRS Product reference">
+                <!--<button id="btnInsertLISRef">Insert LIS Ref</button>-->
+                <br /><br />
+                <!--<button id="btnStyleBodyText">Body Text</button>-->
+                <input id="btnStyleBodyText" type="image" src="Images/image_013.png" alt="Body text (also table text and footnote text)">
+                <input id="btnStyleHeading1" type="image" src="Images/image_009.png" alt="Level 1 heading">
+                <input id="btnStyleHeading2" type="image" src="Images/image_010.png" alt="Level 2 heading">
+                <input id="btnStyleHeading3" type="image" src="Images/image_011.png" alt="Level 3 heading">
+                <input id="btnStyleHeading4" type="image" src="Images/image_012.png" alt="Level 4 heading">
+                <br /><br />
+                <input id="btnInsertTable" type="image" src="Images/CreateTable.png" alt="Add Standard Table">
+
+
+                <!--<button class="ms-Button ms-Button--compound" id="insertSow">
+        <span class="ms-Button-label">1. Insert Template</span><span class="ms-Button-description">Insert initial content from a previous Statement of Work</span>
+    </button><br><br>
+    <button class="ms-Button ms-Button--compound" id="insertParagraphs">
+        <span class="ms-Button-label">2. Add Paragraphs</span><span class="ms-Button-description">Add content from a database of boilerplate paragraphs</span>
+    </button><br><br>
+    <button class="ms-Button ms-Button--compound" id="changePicture">
+        <span class="ms-Button-label">3. Change Logo</span><span class="ms-Button-description">Update the company logo with official image from corporate repository</span>
+    </button><br><br>
+    <button class="ms-Button ms-Button--compound" id="addContentControls">
+        <span class="ms-Button-label">4. Add Customer Content Controls</span><span class="ms-Button-description">Search for 'Contoso' and insert content controls to hold the customer name</span>
+    </button><br><br>
+    <button class="ms-Button ms-Button--compound" id="changeCustomer">
+        <span class="ms-Button-label">5. Change Customer</span><span class="ms-Button-description">Set the customer name to 'Fabrikam' using content controls</span>
+    </button><br><br>
+    <button class="ms-Button ms-Button--compound" id="insertFile">
+        <span class="ms-Button-label">6. Insert File</span><span class="ms-Button-description">Reuse content by merging in another document</span>
+    </button><br><br>
+    <button class="ms-Button ms-Button--compound" id="search">
+        <span class="ms-Button-label">7. Search with Wildcards</span><span class="ms-Button-description">Use wildcard search to find all the currency amounts in the document</span>
+    </button><br><br>
+    <button class="ms-Button ms-Button--compound" id="footer">
+        <span class="ms-Button-label">8. Insert Footer</span><span class="ms-Button-description">Add a footer to the document with the page number in it</span>
+    </button>-->
+            </div>
+
+
+
+            <!--<br />
+
+    <p class="ms-font-xxl ms-fontColor-neutralSecondary ms-fontWeight-semilight">Dialog Demo</p>
+    <br /><br />
+
+    <div id="subtitle" class="ms-font-xl ms-fontColor-neutralTertiary">Pick number</div>
+    <p class="ms-font-m-plus ms-fontColor-neutralTertiary" id="template-description"></p>
+    <br /><br />-->
+
+
+
+            <!--<hr />
+
+    <button class="ms-Button ms-Button--primary" id="action-button2">
+        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+        <span class="ms-Button-label" id="button-text2"></span>
+        <span class="ms-Button-description" id="button-desc2"></span>
+    </button>
+
+    <p class="ms-font-m ms-fontColor-neutralSecondary ms-fontWeight-semilight">**IMPORTANT: The displayAsIframe flag is only honored on Online/Web hosts such as Word Online.  Desktop clients (Windows, IOS, Mac) ignore the flag and always display dialogs as an Office dialog control with a WebView in it. The recommendation for best user experience and performance is to always use displayAsIframe=true if the dialog page supports IFraming; this will provide the best possible experience across all platforms.</p>-->
+
+
+
+
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="ms-Grid ms-bgColor-themeSecondary">
+            <div class="ms-Grid-row">
+                <div class="ms-Grid-col ms-u-sm12 ms-u-md12 ms-u-lg12"> <div class="ms-font-xl ms-fontColor-white">CRS AP Tools</div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

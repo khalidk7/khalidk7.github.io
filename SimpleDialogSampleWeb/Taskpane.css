@@ -1,0 +1,36 @@
+﻿/* Page-specific styling */
+/*Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. 
+4  See LICENSE in the project root for license information */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 40px; /* bottom = footer height */
+}
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+}
+
+.paddingSmall {
+    padding: 2px;
+}
+
+.padding {
+    padding: 15px;
+}
+
+#content-header {
+    background: #2a8dd4;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Fixed header height */
+    overflow: hidden; /* Disable scrollbars for header */
+}

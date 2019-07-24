@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+4  See LICENSE in the project root for license information -->
+
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.1.min.js"></script>
+
+    <!-- For the Office UI Fabric, go to http://aka.ms/office-ui-fabric to learn more. -->
+    <!--https://developer.microsoft.com/en-us/fabric#/get-started#fabric-core-->
+    <!--<link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/10.0.0/css/fabric.min.css" />-->
+
+
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css">
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css">
+    <script>
+        //Office.initialize = function () {
+        //    $('#button1').click(one);
+        //    $('#button2').click(two);
+        //};
+
+        Office.initialize = function (reason) {
+            $(document).ready(function () {
+
+                $('#btnInsert').click(insertLISRef);
+                //$('#button2').click(two);
+            });
+        };
+
+
+
+        function insertLISRef() {
+
+            var message = {
+                "methodName": "LISRef",
+                "LIS": {
+                    "billType": $('#selBillTypes').val(),
+                    "billNum": $('#txtNumber').val(),
+                    "congressYear": $('#numCongressYear').val()
+                }
+            };
+
+            Office.context.ui.messageParent(JSON.stringify(message));
+
+
+
+        }
+
+        function two() {
+            Office.context.ui.messageParent("Picked 2");
+        }
+
+
+
+    </script>
+</head>
+<body class="ms-Fabric">
+    <!--<i class="ms-Icon ms-font-xl ms-Icon--Table ms-fontColor-themePrimary"></i>-->
+
+    <p class="ms-font-xxl ms-fontColor-neutralSecondary ms-fontWeight-semilight">Insert LIS Reference</p>
+
+    <!--houseBill = 0,
+    senateBill = 1,
+    houseReport = 2,
+    senateReport = 3,
+    houseRes = 4,
+    senateRes = 5,
+    houseConRes = 6,
+    senateConRes = 7,
+    houseJointRes = 8,
+    senateJointRes = 9,
+    houseAmdt = 10,
+    senateAmdt = 11,
+    publicLaw = 12-->
+
+    <span class="ms-Button-label" id="lblType">Type:</span>
+    <select class="ms-Dropdown" id="selBillTypes">
+        <option value="houseBill">H.R.</option>
+        <option value="senateBill">S.</option>
+        <option value="houseReport">H.Rept.</option>
+        <option value="senateReport">S.Rept</option>
+    </select>
+    <br>
+    <span class="ms-Button-label" id="lblCongressYear">Congress Year:</span>
+    <input class="ms-TextField" type="number" id="numCongressYear" min="80" max="116" value="116"><br>
+    <span class="ms-Button-label" id="lblNumber">Number:</span>
+    <input class="ms-TextField" type="text" id="txtNumber"><br>
+
+    <button class="ms-Button ms-Button--primary" id="btnInsert">
+        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+        <span class="ms-Button-label" id="button1-text">Insert</span>
+        <span class="ms-Button-description" id="button1-desc">Insert</span>
+    </button>
+
+
+</body>
+</html>
