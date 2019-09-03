@@ -6,9 +6,9 @@
     "use strict";
 
     var messageBanner;
-    var _baseDIR = '../../';
+    //var _baseDIR = '../../';
     // use below for O365 OR On-Premises and comment above.
-    //var _baseDIR = 'https://khalidk7.github.io/SimpleDialogSampleWeb/';
+    var _baseDIR = 'https://khalidk7.github.io/SimpleDialogSampleWeb/';
 
 
     // The initialize function must be defined each time a new page is loaded.

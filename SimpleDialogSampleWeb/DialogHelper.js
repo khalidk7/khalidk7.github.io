@@ -2,9 +2,9 @@
 4  See LICENSE in the project root for license information */
 
 var dialog;
-var _baseURL = window.location.origin;
+//var _baseURL = window.location.origin;
 // use below for O365 OR On-Premises and comment above.
-//var _baseURL = 'https://khalidk7.github.io/SimpleDialogSampleWeb';
+var _baseURL = 'https://khalidk7.github.io/SimpleDialogSampleWeb';
 
 function dialogCallback(asyncResult) {
     if (asyncResult.status == "failed") {
