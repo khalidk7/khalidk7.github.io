@@ -1,0 +1,116 @@
+﻿<w:sdt>
+  <w:sdtPr>
+    <w:rPr>
+      <w:b w:val="0"/>
+    </w:rPr>
+    <w:alias w:val="TitleAuthors"/>
+    <w:tag w:val="TitleAuthors"/>
+    <w:lock w:val="sdtContentLocked"/>
+    <w:placeholder></w:placeholder>
+  </w:sdtPr>
+  <w:sdtEndPr/>
+  <w:sdtContent>
+    <w:sdt>
+      <w:sdtPr>
+        <w:rPr>
+          <w:b w:val="0"/>
+        </w:rPr>
+        <w:alias w:val="TitleAuthor"/>
+        <w:tag w:val="TitleAuthor"/>
+        <w:lock w:val="sdtContentLocked"/>
+        <w:placeholder></w:placeholder>
+      </w:sdtPr>
+      <w:sdtContent>
+        <w:sdt>
+          <w:sdtPr>
+            <w:alias w:val="Name"/>
+            <w:tag w:val="Name"/>
+            <w:lock w:val="sdtContentLocked"/>
+            <w:placeholder></w:placeholder>
+            <w:text/>
+          </w:sdtPr>
+          <w:sdtContent>
+            <w:p>
+              <w:pPr>
+                <w:pStyle w:val="CoverAuthorName"/>
+              </w:pPr>
+              <w:r>
+                <w:t>Khalid A. Khasawinah</w:t>
+              </w:r>
+            </w:p>
+          </w:sdtContent>
+        </w:sdt>
+        <w:sdt>
+          <w:sdtPr>
+            <w:alias w:val="Position"/>
+            <w:tag w:val="Position"/>
+            <w:lock w:val="sdtContentLocked"/>
+            <w:placeholder></w:placeholder>
+            <w:text/>
+          </w:sdtPr>
+          <w:sdtContent>
+            <w:p >
+              <w:pPr>
+                <w:pStyle w:val="CoverAuthorTitle"/>
+              </w:pPr>
+              <w:r>
+                <w:t>Applications Developer, Client-Server and WEB</w:t>
+              </w:r>
+            </w:p>
+          </w:sdtContent>
+        </w:sdt>
+      </w:sdtContent>
+    </w:sdt>
+    <w:sdt>
+      <w:sdtPr>
+        <w:rPr>
+          <w:b w:val="0"/>
+        </w:rPr>
+        <w:alias w:val="TitleAuthor"/>
+        <w:tag w:val="TitleAuthor"/>
+        <w:lock w:val="sdtContentLocked"/>
+        <w:placeholder></w:placeholder>
+      </w:sdtPr>
+      <w:sdtContent>
+        <w:sdt>
+          <w:sdtPr>
+            <w:alias w:val="Name"/>
+            <w:tag w:val="Name"/>
+            <w:lock w:val="sdtContentLocked"/>
+            <w:placeholder></w:placeholder>
+            <w:text/>
+          </w:sdtPr>
+          <w:sdtContent>
+            <w:p >
+              <w:pPr>
+                <w:pStyle w:val="CoverAuthorName"/>
+              </w:pPr>
+              <w:r>
+                <w:t>Amy Abel</w:t>
+              </w:r>
+            </w:p>
+          </w:sdtContent>
+        </w:sdt>
+        <w:sdt>
+          <w:sdtPr>
+            <w:alias w:val="Position"/>
+            <w:tag w:val="Position"/>
+            <w:lock w:val="sdtContentLocked"/>
+            <w:placeholder></w:placeholder>
+            <w:text/>
+          </w:sdtPr>
+          <w:sdtContent>
+            <w:p >
+              <w:pPr>
+                <w:pStyle w:val="CoverAuthorTitle"/>
+              </w:pPr>
+              <w:r>
+                <w:t>Section Research Manager</w:t>
+              </w:r>
+            </w:p>
+          </w:sdtContent>
+        </w:sdt>
+      </w:sdtContent>
+    </w:sdt>
+  </w:sdtContent>
+</w:sdt>

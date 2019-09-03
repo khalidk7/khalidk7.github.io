@@ -1,0 +1,64 @@
+﻿<w:sdt>
+  <w:sdtPr>
+    <w:rPr>
+      <w:b w:val="0"/>
+    </w:rPr>
+    <w:alias w:val="TitleAuthor"/>
+    <w:tag w:val="TitleAuthor"/>
+    <w:id w:val="-1282182269"/>
+    <w:lock w:val="contentLocked"/>
+    <w:placeholder>
+      <w:docPart w:val="F02553014968417A94277472BDB3CDAE"/>
+    </w:placeholder>
+  </w:sdtPr>
+  <w:sdtContent>
+    <w:sdt>
+      <w:sdtPr>
+        <w:alias w:val="Name"/>
+        <w:tag w:val="Name"/>
+        <w:id w:val="-701479375"/>
+        <w:lock w:val="contentLocked"/>
+        <w:placeholder>
+          <w:docPart w:val="0AA31A69408D498B962F9586DF3F61D6"/>
+        </w:placeholder>
+      </w:sdtPr>
+      <w:sdtContent>
+        <w:p>
+          <w:pPr>
+            <w:pStyle w:val="CoverAuthorName"/>
+          </w:pPr>
+          <w:r>
+            <w:t>{0}</w:t>
+          </w:r>
+        </w:p>
+      </w:sdtContent>
+    </w:sdt>
+    <w:sdt>
+      <w:sdtPr>
+        <w:alias w:val="Position"/>
+        <w:tag w:val="Position"/>
+        <w:id w:val="279543261"/>
+        <w:lock w:val="contentLocked"/>
+        <w:placeholder>
+          <w:docPart w:val="AC99664CCF8E42868781CF98D3B3CE8A"/>
+        </w:placeholder>
+      </w:sdtPr>
+      <w:sdtContent>
+        <w:p>
+          <w:pPr>
+            <w:pStyle w:val="CoverAuthorTitle"/>
+            <w:rPr>
+              <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+              <w:bCs w:val="0"/>
+              <w:sz w:val="24"/>
+              <w:szCs w:val="24"/>
+            </w:rPr>
+          </w:pPr>
+          <w:r>
+            <w:t>{1}</w:t>
+          </w:r>
+        </w:p>
+      </w:sdtContent>
+    </w:sdt>
+  </w:sdtContent>
+</w:sdt>

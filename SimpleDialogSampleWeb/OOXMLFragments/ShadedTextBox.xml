@@ -1,0 +1,151 @@
+﻿<pkg:package xmlns:pkg="http://schemas.microsoft.com/office/2006/xmlPackage">
+  <pkg:part pkg:name="/_rels/.rels" pkg:contentType="application/vnd.openxmlformats-package.relationships+xml" pkg:padding="512">
+    <pkg:xmlData>
+      <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+        <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>
+      </Relationships>
+    </pkg:xmlData>
+  </pkg:part>
+  <pkg:part pkg:name="/word/_rels/document.xml.rels" pkg:contentType="application/vnd.openxmlformats-package.relationships+xml" pkg:padding="256">
+    <pkg:xmlData>
+      <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+        <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>
+      </Relationships>
+    </pkg:xmlData>
+  </pkg:part>
+  <pkg:part pkg:name="/word/document.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml">
+    <pkg:xmlData>
+      <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" >
+        <w:body>
+          <!--As you see in the markup that follows, you can remove many pieces of a content control (sdt) without issue. Here, the tag and document part references have been removed. The w:showingPlaceholder attribute causes the default content (in the text run in this example) to behave like placeholder text and be automatically selected on click. Also note the w15:appearance attribute which sets the container of the content control to be hidden for a cleaner user experience. Additionally, notice that there is a complete paragraph contained in the placeholder content for this control. Your control must contain at least one complete paragraph when you bind to it in order to enable you to insert multi-paragraph rich content at the binding location.-->
+          <w:tbl>
+            <w:tblPr>
+              <w:tblW w:w="5000" w:type="pct"/>
+              <w:jc w:val="center"/>
+              <w:tblBorders>
+                <w:top w:val="single" w:sz="8" w:space="0" w:color="auto"/>
+                <w:left w:val="single" w:sz="8" w:space="0" w:color="auto"/>
+                <w:bottom w:val="single" w:sz="8" w:space="0" w:color="auto"/>
+                <w:right w:val="single" w:sz="8" w:space="0" w:color="auto"/>
+              </w:tblBorders>
+              <w:shd w:val="clear" w:color="auto" w:fill="F3F3F3"/>
+              <w:tblLayout w:type="fixed"/>
+              <w:tblLook w:val="01E0" w:firstRow="1" w:lastRow="1" w:firstColumn="1" w:lastColumn="1" w:noHBand="0" w:noVBand="0"/>
+            </w:tblPr>
+            <w:tblGrid>
+              <w:gridCol w:w="9340"/>
+            </w:tblGrid>
+            <w:tr w:rsidR="00DD3D00" w:rsidRPr="00206A1E" w14:paraId="1D261ECB" w14:textId="77777777" w:rsidTr="00DD3D00">
+              <w:trPr>
+                <w:jc w:val="center"/>
+              </w:trPr>
+              <w:tc>
+                <w:tcPr>
+                  <w:tcW w:w="9340" w:type="dxa"/>
+                  <w:shd w:val="clear" w:color="auto" w:fill="F3F3F3"/>
+                  <w:tcMar>
+                    <w:top w:w="115" w:type="dxa"/>
+                    <w:left w:w="115" w:type="dxa"/>
+                    <w:bottom w:w="115" w:type="dxa"/>
+                    <w:right w:w="115" w:type="dxa"/>
+                  </w:tcMar>
+                </w:tcPr>
+                <w:p w14:paraId="2DF1695F" w14:textId="77777777" w:rsidR="00DD3D00" w:rsidRPr="00070B10" w:rsidRDefault="00DD3D00" w:rsidP="005C28D2">
+                  <w:pPr>
+                    <w:pStyle w:val="ShadedBoxHeading"/>
+                    <w:keepNext w:val="0"/>
+                    <w:keepLines w:val="0"/>
+                    <w:tabs>
+                      <w:tab w:val="num" w:pos="0"/>
+                    </w:tabs>
+                  </w:pPr>
+                  <w:r>
+                    <w:fldChar w:fldCharType="begin"/>
+                  </w:r>
+                  <w:r>
+                    <w:instrText xml:space="preserve"> MACROBUTTON nomacro Click here and type your heading </w:instrText>
+                  </w:r>
+                  <w:r>
+                    <w:fldChar w:fldCharType="end"/>
+                  </w:r>
+                </w:p>
+                <w:p w14:paraId="21643A87" w14:textId="77777777" w:rsidR="00DD3D00" w:rsidRPr="00206A1E" w:rsidRDefault="00DD3D00" w:rsidP="003567C3">
+                  <w:pPr>
+                    <w:pStyle w:val="TableText"/>
+                    <w:tabs>
+                      <w:tab w:val="num" w:pos="0"/>
+                    </w:tabs>
+                    <w:rPr>
+                      <w:szCs w:val="20"/>
+                    </w:rPr>
+                  </w:pPr>
+                  <w:r>
+                    <w:rPr>
+                      <w:szCs w:val="20"/>
+                    </w:rPr>
+                    <w:fldChar w:fldCharType="begin"/>
+                  </w:r>
+                  <w:r>
+                    <w:rPr>
+                      <w:szCs w:val="20"/>
+                    </w:rPr>
+                    <w:instrText xml:space="preserve"> MACROBUTTON nomacro Click here and type the text </w:instrText>
+                  </w:r>
+                  <w:r>
+                    <w:rPr>
+                      <w:szCs w:val="20"/>
+                    </w:rPr>
+                    <w:fldChar w:fldCharType="end"/>
+                  </w:r>
+                </w:p>
+              </w:tc>
+            </w:tr>
+          </w:tbl>
+          <w:p w14:paraId="70C21920" w14:textId="73A4ED99" w:rsidR="00DD3D00" w:rsidRDefault="00DD3D00" w:rsidP="00C479FC">
+            <w:pPr>
+              <w:pStyle w:val="BodyText"/>
+            </w:pPr>
+          </w:p>
+        </w:body>
+      </w:document>
+    </pkg:xmlData>
+  </pkg:part>
+  <pkg:part pkg:name="/word/styles.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml">
+    <pkg:xmlData>
+      <w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" >
+
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="TableText">
+          <w:name w:val="TableText"/>
+          <w:basedOn w:val="BodyText"/>
+          <w:rsid w:val="000D1B36"/>
+          <w:pPr>
+            <w:spacing w:before="60" w:after="60"/>
+          </w:pPr>
+          <w:rPr>
+            <w:rFonts w:ascii="Gill Sans MT" w:hAnsi="Gill Sans MT"/>
+            <w:sz w:val="18"/>
+          </w:rPr>
+        </w:style>
+
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="ShadedBoxHeading">
+          <w:name w:val="ShadedBox Heading"/>
+          <w:basedOn w:val="TableText"/>
+          <w:next w:val="TableText"/>
+          <w:rsid w:val="000D1B36"/>
+          <w:pPr>
+            <w:keepNext/>
+            <w:keepLines/>
+            <w:spacing w:before="0" w:after="0"/>
+            <w:jc w:val="center"/>
+          </w:pPr>
+          <w:rPr>
+            <w:b/>
+            <w:sz w:val="22"/>
+          </w:rPr>
+        </w:style>
+
+
+      </w:styles>
+    </pkg:xmlData>
+  </pkg:part>
+</pkg:package>

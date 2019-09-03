@@ -1,0 +1,192 @@
+﻿<pkg:package xmlns:pkg="http://schemas.microsoft.com/office/2006/xmlPackage">
+  <pkg:part pkg:name="/_rels/.rels" pkg:contentType="application/vnd.openxmlformats-package.relationships+xml" pkg:padding="512">
+    <pkg:xmlData>
+      <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+        <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>
+      </Relationships>
+    </pkg:xmlData>
+  </pkg:part>
+  <pkg:part pkg:name="/word/_rels/document.xml.rels" pkg:contentType="application/vnd.openxmlformats-package.relationships+xml" pkg:padding="256">
+    <pkg:xmlData>
+      <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+        <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>
+      </Relationships>
+    </pkg:xmlData>
+  </pkg:part>
+  <pkg:part pkg:name="/word/document.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml">
+    <pkg:xmlData>
+      <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" >
+        <!--As you see in the markup that follows, you can remove many pieces of a content control (sdt) without issue. Here, the tag and document part references have been removed. The w:showingPlaceholder attribute causes the default content (in the text run in this example) to behave like placeholder text and be automatically selected on click. Also note the w15:appearance attribute which sets the container of the content control to be hidden for a cleaner user experience. Additionally, notice that there is a complete paragraph contained in the placeholder content for this control. Your control must contain at least one complete paragraph when you bind to it in order to enable you to insert multi-paragraph rich content at the binding location.-->
+        <w:body>
+
+          <w:sdt>
+            <w:sdtPr>
+              <w:rPr>
+                <w:b w:val="0"/>
+              </w:rPr>
+              <w:alias w:val="TitleAuthor"/>
+              <w:tag w:val="TitleAuthor"/>
+              <w:id w:val="-472145053"/>
+              <w:lock w:val="contentLocked"/>
+              <w:placeholder>
+                <w:docPart w:val="A673246942D543A0B8BC84546DF306DB"/>
+              </w:placeholder>
+            </w:sdtPr>
+            <w:sdtContent>
+              <w:sdt>
+                <w:sdtPr>
+                  <w:alias w:val="Name"/>
+                  <w:tag w:val="Name"/>
+                  <w:id w:val="809370111"/>
+                  <w:lock w:val="contentLocked"/>
+                  <w:placeholder>
+                    <w:docPart w:val="F8FC451628A643DBB4A5FE6760F03F28"/>
+                  </w:placeholder>
+                </w:sdtPr>
+                <w:sdtContent>
+                  <w:p>
+                    <w:pPr>
+                      <w:pStyle w:val="CoverAuthorName"/>
+                    </w:pPr>
+                    <w:r>
+                      <w:t>Khalid K</w:t>
+                    </w:r>
+                  </w:p>
+                </w:sdtContent>
+              </w:sdt>
+              <w:sdt>
+                <w:sdtPr>
+                  <w:alias w:val="Position"/>
+                  <w:tag w:val="Position"/>
+                  <w:id w:val="-915704219"/>
+                  <w:placeholder>
+                    <w:docPart w:val="0348BB2A3A524D96BA16EE814EFC42E9"/>
+                  </w:placeholder>
+                </w:sdtPr>
+                <w:sdtContent>
+                  <w:p>
+                    <w:pPr>
+                      <w:pStyle w:val="CoverAuthorTitle"/>
+                      <w:rPr>
+                        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+                        <w:bCs w:val="0"/>
+                        <w:sz w:val="24"/>
+                        <w:szCs w:val="24"/>
+                      </w:rPr>
+                    </w:pPr>
+                    <w:r>
+                      <w:t>App Dev</w:t>
+                    </w:r>
+                  </w:p>
+                </w:sdtContent>
+              </w:sdt>
+            </w:sdtContent>
+          </w:sdt>
+          <w:sdt>
+            <w:sdtPr>
+              <w:rPr>
+                <w:b w:val="0"/>
+              </w:rPr>
+              <w:alias w:val="TitleAuthor"/>
+              <w:tag w:val="TitleAuthor"/>
+              <w:id w:val="-1282182269"/>
+              <w:lock w:val="contentLocked"/>
+              <w:placeholder>
+                <w:docPart w:val="F02553014968417A94277472BDB3CDAE"/>
+              </w:placeholder>
+            </w:sdtPr>
+            <w:sdtContent>
+              <w:sdt>
+                <w:sdtPr>
+                  <w:alias w:val="Name"/>
+                  <w:tag w:val="Name"/>
+                  <w:id w:val="-701479375"/>
+                  <w:lock w:val="contentLocked"/>
+                  <w:placeholder>
+                    <w:docPart w:val="0AA31A69408D498B962F9586DF3F61D6"/>
+                  </w:placeholder>
+                </w:sdtPr>
+                <w:sdtContent>
+                  <w:p>
+                    <w:pPr>
+                      <w:pStyle w:val="CoverAuthorName"/>
+                    </w:pPr>
+                    <w:r>
+                      <w:t>John Doe</w:t>
+                    </w:r>
+                  </w:p>
+                </w:sdtContent>
+              </w:sdt>
+              <w:sdt>
+                <w:sdtPr>
+                  <w:alias w:val="Position"/>
+                  <w:tag w:val="Position"/>
+                  <w:id w:val="279543261"/>
+                  <w:lock w:val="contentLocked"/>
+                  <w:placeholder>
+                    <w:docPart w:val="AC99664CCF8E42868781CF98D3B3CE8A"/>
+                  </w:placeholder>
+                </w:sdtPr>
+                <w:sdtContent>
+                  <w:p>
+                    <w:pPr>
+                      <w:pStyle w:val="CoverAuthorTitle"/>
+                      <w:rPr>
+                        <w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>
+                        <w:bCs w:val="0"/>
+                        <w:sz w:val="24"/>
+                        <w:szCs w:val="24"/>
+                      </w:rPr>
+                    </w:pPr>
+                    <w:r>
+                      <w:t>Analyst</w:t>
+                    </w:r>
+                  </w:p>
+                </w:sdtContent>
+              </w:sdt>
+            </w:sdtContent>
+          </w:sdt>
+
+
+        </w:body>
+
+      </w:document>
+    </pkg:xmlData>
+  </pkg:part>
+  <pkg:part pkg:name="/word/styles.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml">
+    <pkg:xmlData>
+      <w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" >
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="CoverTitle">
+          <w:name w:val="Cover_Title"/>
+          <w:basedOn w:val="Title"/>
+          <w:next w:val="CoverAuthorName"/>
+          <w:semiHidden/>
+          <w:rsid w:val="000D1B36"/>
+          <w:pPr>
+            <w:keepNext/>
+            <w:keepLines/>
+            <w:pageBreakBefore w:val="0"/>
+            <w:spacing w:before="0" w:after="480"/>
+          </w:pPr>
+        </w:style>
+
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="CoverAuthorName">
+          <w:name w:val="Cover_AuthorName"/>
+          <w:basedOn w:val="Title"/>
+          <w:next w:val="CoverAuthorTitle"/>
+          <w:semiHidden/>
+          <w:rsid w:val="000D1B36"/>
+          <w:pPr>
+            <w:pageBreakBefore w:val="0"/>
+            <w:spacing w:before="0" w:after="0"/>
+            <w:outlineLvl w:val="9"/>
+          </w:pPr>
+          <w:rPr>
+            <w:sz w:val="28"/>
+          </w:rPr>
+        </w:style>
+
+      </w:styles>
+    </pkg:xmlData>
+  </pkg:part>
+</pkg:package>

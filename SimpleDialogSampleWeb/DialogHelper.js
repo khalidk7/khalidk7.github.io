@@ -2,6 +2,9 @@
 4  See LICENSE in the project root for license information */
 
 var dialog;
+var _baseURL = window.location.origin;
+// use below for O365 OR On-Premises and comment above.
+//var _baseURL = 'https://khalidk7.github.io/SimpleDialogSampleWeb';
 
 function dialogCallback(asyncResult) {
     if (asyncResult.status == "failed") {
@@ -53,7 +56,7 @@ function messageHandler(arg) {
             break;
         case "InsertAuthors":
             showNotification("Inserting Authors");
-            addAuthors();
+            addAuthors6(message.authors);
 //            insertCRSRef(message.CrsProduct, message.displayText);
             break;
     }
@@ -83,23 +86,23 @@ function eventHandler(arg) {
 }
 
 function openLISRefDialog() {
-    Office.context.ui.displayDialogAsync("https://khalidk7.github.io/SimpleDialogSampleWeb/DialogLIS.html",
+    Office.context.ui.displayDialogAsync(_baseURL + "/DialogLIS.html",
         { height: 30, width: 30 }, dialogCallback);
 }
 
 function openCRSRefDialog() {
-    Office.context.ui.displayDialogAsync("https://khalidk7.github.io/SimpleDialogSampleWeb/DialogCRS.html",
+    Office.context.ui.displayDialogAsync(_baseURL + "/DialogCRS.html",
         { height: 35, width: 33 }, dialogCallback);
 }
 
 function openInsertAuthorsDialog() {
-    Office.context.ui.displayDialogAsync("https://khalidk7.github.io/SimpleDialogSampleWeb/DialogAuthors.html",
-        { height: 40, width: 33 }, dialogCallback);
+    Office.context.ui.displayDialogAsync(_baseURL + "/DialogAuthors.html",
+        { height: 50, width: 33 }, dialogCallback);
 }
 
 function openDialogAsIframe() {
     //IMPORTANT: IFrame mode only works in Online (Web) clients. Desktop clients (Windows, IOS, Mac) always display as a pop-up inside of Office apps. 
-    Office.context.ui.displayDialogAsync("https://khalidk7.github.io/SimpleDialogSampleWeb/DialogLIS.html",
+    Office.context.ui.displayDialogAsync(_baseURL + "/DialogLIS.html",
         { height: 50, width: 50, displayInIframe: true }, dialogCallback);
 }
 

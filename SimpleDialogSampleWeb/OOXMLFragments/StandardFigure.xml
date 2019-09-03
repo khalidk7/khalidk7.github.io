@@ -1,0 +1,440 @@
+﻿<pkg:package xmlns:pkg="http://schemas.microsoft.com/office/2006/xmlPackage">
+  <pkg:part pkg:name="/_rels/.rels" pkg:contentType="application/vnd.openxmlformats-package.relationships+xml" pkg:padding="512">
+    <pkg:xmlData>
+      <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+        <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>
+      </Relationships>
+    </pkg:xmlData>
+  </pkg:part>
+  <pkg:part pkg:name="/word/_rels/document.xml.rels" pkg:contentType="application/vnd.openxmlformats-package.relationships+xml" pkg:padding="256">
+    <pkg:xmlData>
+      <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+        <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>
+        <Relationship Id="rId22" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image4.png"/>
+      </Relationships>
+    </pkg:xmlData>
+  </pkg:part>
+  <pkg:part pkg:name="/word/document.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml">
+    <pkg:xmlData>
+      <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+        <w:body>
+          <!--As you see in the markup that follows, you can remove many pieces of a content control (sdt) without issue. Here, the tag and document part references have been removed. The w:showingPlaceholder attribute causes the default content (in the text run in this example) to behave like placeholder text and be automatically selected on click. Also note the w15:appearance attribute which sets the container of the content control to be hidden for a cleaner user experience. Additionally, notice that there is a complete paragraph contained in the placeholder content for this control. Your control must contain at least one complete paragraph when you bind to it in order to enable you to insert multi-paragraph rich content at the binding location.-->
+          <w:p w14:paraId="4738B80F" w14:textId="740A77A0" w:rsidR="008313F2" w:rsidRPr="00D91C3C" w:rsidRDefault="008313F2" w:rsidP="007D2EB0">
+            <w:pPr>
+              <w:pStyle w:val="FigureTitle"/>
+              <w:numPr>
+                <w:ilvl w:val="0"/>
+                <w:numId w:val="0"/>
+              </w:numPr>
+              <w:tabs>
+                <w:tab w:val="num" w:pos="0"/>
+              </w:tabs>
+            </w:pPr>
+            <w:r>
+              <w:t xml:space="preserve">Figure </w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:noProof/>
+              </w:rPr>
+              <w:fldChar w:fldCharType="begin"/>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:noProof/>
+              </w:rPr>
+              <w:instrText xml:space="preserve"> SEQ Figure \* ARABIC </w:instrText>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:noProof/>
+              </w:rPr>
+              <w:fldChar w:fldCharType="separate"/>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:noProof/>
+              </w:rPr>
+              <w:t>1</w:t>
+            </w:r>
+            <w:r>
+              <w:rPr>
+                <w:noProof/>
+              </w:rPr>
+              <w:fldChar w:fldCharType="end"/>
+            </w:r>
+            <w:r>
+              <w:t xml:space="preserve">. </w:t>
+            </w:r>
+            <w:r>
+              <w:fldChar w:fldCharType="begin"/>
+            </w:r>
+            <w:r>
+              <w:instrText xml:space="preserve"> MACROBUTTON nomacro Click and type title, or delete </w:instrText>
+            </w:r>
+            <w:r>
+              <w:fldChar w:fldCharType="end"/>
+            </w:r>
+          </w:p>
+          <w:p w14:paraId="65FA0165" w14:textId="77777777" w:rsidR="008313F2" w:rsidRPr="00D91C3C" w:rsidRDefault="008313F2" w:rsidP="007D2EB0">
+            <w:pPr>
+              <w:pStyle w:val="FigureSubTitle"/>
+              <w:numPr>
+                <w:ilvl w:val="1"/>
+                <w:numId w:val="0"/>
+              </w:numPr>
+              <w:tabs>
+                <w:tab w:val="num" w:pos="0"/>
+              </w:tabs>
+            </w:pPr>
+            <w:r>
+              <w:fldChar w:fldCharType="begin"/>
+            </w:r>
+            <w:r>
+              <w:instrText xml:space="preserve"> MACROBUTTON nomacro Click and type sub-title, or delete </w:instrText>
+            </w:r>
+            <w:r>
+              <w:fldChar w:fldCharType="end"/>
+            </w:r>
+          </w:p>
+          <w:p w14:paraId="431479C0" w14:textId="4290F27F" w:rsidR="008313F2" w:rsidRPr="00D91C3C" w:rsidRDefault="008313F2" w:rsidP="008313F2">
+            <w:pPr>
+              <w:pStyle w:val="Figure"/>
+              <w:ind w:left="-3930" w:right="-3930"/>
+            </w:pPr>
+            <w:bookmarkStart w:id="1" w:name="_GoBack"/>
+            <w:r>
+              <w:rPr>
+                <w:noProof/>
+              </w:rPr>
+              <w:drawing>
+                <wp:inline distT="0" distB="0" distL="0" distR="0">
+                  <wp:extent cx="5486400" cy="3082290"/>
+                  <wp:effectExtent l="19050" t="19050" r="19050" b="22860"/>
+                  <wp:docPr id="4" name="Picture 4"/>
+                  <wp:cNvGraphicFramePr/>
+                  <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+                    <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                      <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                        <pic:nvPicPr>
+                          <pic:cNvPr id="4" name="Picture 4"/>
+                          <pic:cNvPicPr/>
+                        </pic:nvPicPr>
+                        <pic:blipFill>
+                          <a:blip r:embed="rId22">
+                            <a:extLst>
+                              <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                                <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0"/>
+                              </a:ext>
+                            </a:extLst>
+                          </a:blip>
+                          <a:stretch>
+                            <a:fillRect/>
+                          </a:stretch>
+                        </pic:blipFill>
+                        <pic:spPr>
+                          <a:xfrm>
+                            <a:off x="0" y="0"/>
+                            <a:ext cx="5486400" cy="3082290"/>
+                          </a:xfrm>
+                          <a:prstGeom prst="rect">
+                            <a:avLst/>
+                          </a:prstGeom>
+                          <a:ln w="6348" cmpd="sng">
+                            <a:solidFill>
+                              <a:srgbClr val="000000"/>
+                            </a:solidFill>
+                            <a:prstDash val="solid"/>
+                          </a:ln>
+                        </pic:spPr>
+                      </pic:pic>
+                    </a:graphicData>
+                  </a:graphic>
+                </wp:inline>
+              </w:drawing>
+            </w:r>
+            <w:bookmarkEnd w:id="1"/>
+          </w:p>
+          <w:p w14:paraId="038F9079" w14:textId="77777777" w:rsidR="008313F2" w:rsidRPr="000012A3" w:rsidRDefault="008313F2" w:rsidP="007D2EB0">
+            <w:pPr>
+              <w:pStyle w:val="FigureSource"/>
+              <w:tabs>
+                <w:tab w:val="num" w:pos="360"/>
+              </w:tabs>
+            </w:pPr>
+            <w:r>
+              <w:rPr>
+                <w:b/>
+              </w:rPr>
+              <w:t xml:space="preserve">Source: </w:t>
+            </w:r>
+            <w:r>
+              <w:fldChar w:fldCharType="begin"/>
+            </w:r>
+            <w:r>
+              <w:instrText xml:space="preserve"> MACROBUTTON nomacro Click and type sources </w:instrText>
+            </w:r>
+            <w:r>
+              <w:fldChar w:fldCharType="end"/>
+            </w:r>
+          </w:p>
+          <w:p w14:paraId="35A61DA4" w14:textId="77777777" w:rsidR="008313F2" w:rsidRPr="00D91C3C" w:rsidRDefault="008313F2" w:rsidP="007D2EB0">
+            <w:pPr>
+              <w:pStyle w:val="FigureNote"/>
+            </w:pPr>
+            <w:r w:rsidRPr="00D91C3C">
+              <w:rPr>
+                <w:b/>
+              </w:rPr>
+              <w:t>Notes:</w:t>
+            </w:r>
+            <w:r w:rsidRPr="00D91C3C">
+              <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+              <w:fldChar w:fldCharType="begin"/>
+            </w:r>
+            <w:r>
+              <w:instrText xml:space="preserve"> MACROBUTTON nomacro Click and type notes </w:instrText>
+            </w:r>
+            <w:r>
+              <w:fldChar w:fldCharType="end"/>
+            </w:r>
+          </w:p>
+
+          <w:p w14:paraId="6D76D6F4" w14:textId="7B6243A5" w:rsidR="008313F2" w:rsidRDefault="00C466A1">
+            <w:pPr>
+              <w:pStyle w:val="BodyText"/>
+            </w:pPr>
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+              <w:t></w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+          </w:p>
+          
+        </w:body>
+      </w:document>
+    </pkg:xmlData>
+  </pkg:part>
+  <pkg:part pkg:name="/word/styles.xml" pkg:contentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml">
+    <pkg:xmlData>
+      <w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" >
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="FigureTitle">
+          <w:name w:val="Figure_Title"/>
+          <w:basedOn w:val="TableTitle"/>
+          <w:next w:val="FigureSubTitle"/>
+          <w:uiPriority w:val="99"/>
+          <w:rsid w:val="002B3E67"/>
+          <w:pPr>
+            <w:numPr>
+              <w:numId w:val="15"/>
+            </w:numPr>
+          </w:pPr>
+        </w:style>
+
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="FigureSubTitle">
+          <w:name w:val="Figure_SubTitle"/>
+          <w:basedOn w:val="TableSubTitle"/>
+          <w:next w:val="Figure"/>
+          <w:uiPriority w:val="99"/>
+          <w:rsid w:val="00D6495E"/>
+          <w:pPr>
+            <w:numPr>
+              <w:numId w:val="15"/>
+            </w:numPr>
+          </w:pPr>
+        </w:style>
+
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="Figure">
+          <w:name w:val="Figure"/>
+          <w:basedOn w:val="Normal"/>
+          <w:next w:val="FigureSource"/>
+          <w:uiPriority w:val="99"/>
+          <w:rsid w:val="00D6495E"/>
+          <w:pPr>
+            <w:keepNext/>
+            <w:keepLines/>
+            <w:jc w:val="center"/>
+          </w:pPr>
+        </w:style>
+        
+        
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="FigureSource">
+          <w:name w:val="Figure_Source"/>
+          <w:basedOn w:val="TableSource"/>
+          <w:next w:val="FigureNote"/>
+          <w:uiPriority w:val="99"/>
+          <w:rsid w:val="00D6495E"/>
+        </w:style>
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="FigureNote">
+          <w:name w:val="Figure_Note"/>
+          <w:basedOn w:val="TableNote"/>
+          <w:next w:val="BodyText"/>
+          <w:uiPriority w:val="99"/>
+          <w:rsid w:val="00D6495E"/>
+        </w:style>
+
+
+
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="TableSubTitle">
+          <w:name w:val="Table_SubTitle"/>
+          <w:basedOn w:val="Normal"/>
+          <w:next w:val="TableText"/>
+          <w:rsid w:val="00111FAF"/>
+          <w:pPr>
+            <w:keepNext/>
+            <w:keepLines/>
+            <w:numPr>
+              <w:ilvl w:val="1"/>
+              <w:numId w:val="19"/>
+            </w:numPr>
+            <w:spacing w:after="60"/>
+            <w:jc w:val="center"/>
+          </w:pPr>
+          <w:rPr>
+            <w:rFonts w:ascii="Gill Sans MT" w:hAnsi="Gill Sans MT"/>
+            <w:sz w:val="20"/>
+          </w:rPr>
+        </w:style>
+
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="TableTextHeading">
+          <w:name w:val="TableText Heading"/>
+          <w:basedOn w:val="TableText"/>
+          <w:next w:val="TableText"/>
+          <w:rsid w:val="000D1B36"/>
+          <w:pPr>
+            <w:keepNext/>
+            <w:keepLines/>
+            <w:spacing w:before="100" w:after="100"/>
+          </w:pPr>
+          <w:rPr>
+            <w:b/>
+          </w:rPr>
+        </w:style>
+
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="TableText">
+          <w:name w:val="TableText"/>
+          <w:basedOn w:val="BodyText"/>
+          <w:rsid w:val="000D1B36"/>
+          <w:pPr>
+            <w:spacing w:before="60" w:after="60"/>
+          </w:pPr>
+          <w:rPr>
+            <w:rFonts w:ascii="Gill Sans MT" w:hAnsi="Gill Sans MT"/>
+            <w:sz w:val="18"/>
+          </w:rPr>
+        </w:style>
+
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="TableSource">
+          <w:name w:val="Table_Source"/>
+          <w:basedOn w:val="BodyText"/>
+          <w:next w:val="TableNote"/>
+          <w:rsid w:val="000D1B36"/>
+          <w:pPr>
+            <w:spacing w:after="60"/>
+            <w:ind w:left="360"/>
+          </w:pPr>
+          <w:rPr>
+            <w:rFonts w:ascii="Gill Sans MT" w:hAnsi="Gill Sans MT"/>
+            <w:sz w:val="18"/>
+          </w:rPr>
+        </w:style>
+
+        <w:style w:type="paragraph" w:customStyle="1" w:styleId="TableNote">
+          <w:name w:val="Table_Note"/>
+          <w:basedOn w:val="BodyText"/>
+          <w:next w:val="BodyText"/>
+          <w:rsid w:val="000D1B36"/>
+          <w:pPr>
+            <w:spacing w:before="60" w:after="60"/>
+            <w:ind w:left="360"/>
+          </w:pPr>
+          <w:rPr>
+            <w:rFonts w:ascii="Gill Sans MT" w:hAnsi="Gill Sans MT"/>
+            <w:sz w:val="18"/>
+          </w:rPr>
+        </w:style>
+
+
+      </w:styles>
+    </pkg:xmlData>
+  </pkg:part>
+
+
+  <pkg:part pkg:name="/word/media/image4.png" pkg:contentType="image/png" pkg:compression="store">
+    <pkg:binaryData>
+      iVBORw0KGgoAAAANSUhEUgAABEwAAAJqCAMAAAAG+iWZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+      bWFnZVJlYWR5ccllPAAAADBQTFRF////g6TMqr/b7PD29fj7wdDktsjg1+HtU4W9zNnpnrbW4ujy
+      ka3RdJrHZJDCP3q456ASEgAADu9JREFUeNrs3de62sYCgFEY9Qbv/7bHNKFRh5Av4LPWlR2xxWzF
+      +lHncAb4gINFAIgJICaAmACICSAmgJgAYgIgJoCYAGICiAmAmABiAogJgJgAYgKICSAmAGICiAkg
+      JoCYAIgJICaAmABiAiAmgJgAYgIgJoCYAGICiAmAmABiAogJICYAYgKICSAmgJgAiAkgJoCYAIgJ
+      ICaAmABiAiAmgJgAYgKICYCYAGICiAkgJgBiAogJICYAYgKICSAmgJgAiAkgJoCYAGICICaAmABi
+      AogJgJgAYgKICYCYAGICiAkgJgBiAogJICaAmACICSAmgJgAYmIRAGICiAkgJgBiAogJICaAmACI
+      CSAmgJgAYgIgJoCYAGICICaAmABiAogJgJgAYgKICSAmAGICiAkgJoCYAIgJICaAmACICSAmgJgA
+      YgIgJoCYAGICiAmAmABiAogJICYAYgKICSAmAGICiAkgJoCYAIgJICaAmABiAiAmgJgAYgKICYCY
+      AGICiAmAmABiAogJICYAYgKICSAmgJgAiAkgJoCYAGICICaAmABiAiAmgJgAYgKICYCYAGICiAkg
+      JgBiAogJICaAmFgEgJgAYgKICYCYAGICiAkgJgBiAogJICaAmACICSAmgJgAiAkgJoCYAGICICaA
+      mABiAogJgJgAYgKICSAmAGICiAkgJgBiAogJICaAmACICSAmgJgAYgIgJoCYAGICiAmAmABiAogJ
+      gJgAYgKICSAmAGICiAkgJoCYAIgJICaAmABiAiAmgJgAYgIgJoCYAGICiAmAmABiAogJICYAYgKI
+      CSAmgJgAiAkgJoCYAIgJICaAmABiAiAmgJgAYgKICYCYAGICiAkgJhYBICaAmABiAiAmgJgAYgKI
+      CYCYfI/j4Sr50jfY+Olwm5z5/4iYiImYICY/ozgMJSGIydpyUiYxYV9MLqpOTMRETPhATA6HICZi
+      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
+      YgKICSAmgJgAiAkgJoCYAGICICaAmABiAiAmgJgAYgKICYCYAGICiAkgJgBiAogJICaAmACICSAm
+      gJgAiAkgJoCYAGICICaAmABiAogJgJgAYgKICSAmAGICiAkgJgBiAogJICaAmACICSAmgJgAYgIg
+      JoCYAGICiAmAmABiAogJgJgAYgKICSAmAGICiAkgJoCYAIgJICaAmACICSAmgJgAYgIgJoCYAGIC
+      iAmAmABiAogJICYAYgKICSAmAGICiAkgJoCYAIgJICaAmABiAiAmgJgAYgKICYCYAGICiAmAmABi
+      AogJICYAYgKICSAmgJgAiAkgJoCYAGICICaAmABiAiAmgJgAYgKICYCYAGICiAkgJgBiAogJICaA
+      mACICSAmgJgAiAkgJoCYAGICICaAmABiAogJgJgAYgKICSAmAGICiAkgJgBiAogJICaAmACICSAm
+      gJgAYgIgJoCYAGICICaAmABiAogJgJgAYgKICSAmAGICiAkgJoCYAIgJICaAmACICSAmgJgAYgIg
+      JoCYAGICiAmAmABiAogJICYAYgKICSAmAGICiAkgJoCYAIgJICaAmABiAiAmgJgAYgKICYCYAGIC
+      iAmAmABiAogJICYAYgKICSAmgJgAiAkgJoCYAGICICaAmABiAiAmgJgAYgKICYCYAGICiAkgJgBi
+      AogJICaAmACICSAmgJgAiAnwb/ifAAMAFxT551HW9bMAAAAASUVORK5CYII=
+    </pkg:binaryData>
+  </pkg:part>  
+  
+</pkg:package>
