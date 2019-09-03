@@ -380,8 +380,8 @@ function addAuthors6(authors) {
                     }
                 }
 
-                xmlTitleAuthors = getFileContent('../../OOXMLFragments/TitleAuthorsTemplate.xml');
-                let xmlTitleAuthor = getFileContent('../../OOXMLFragments/TitleAuthorTemplate.xml');
+                xmlTitleAuthors = getFileContent(_baseDIR + 'OOXMLFragments/TitleAuthorsTemplate.xml');
+                let xmlTitleAuthor = getFileContent(_baseDIR + 'OOXMLFragments/TitleAuthorTemplate.xml');
                 let authorsCombined = "";
                 for (var m = 0; m < authorsData.length; m++) {
                     authorsCombined += String.format(xmlTitleAuthor, authorsData[m].fullName, authorsData[m].title);
@@ -512,8 +512,8 @@ function addAuthors5(authors) {
             })
             .then(ctx.sync)
             .then(function () {
-                xmlTitleAuthors = getFileContent('../../OOXMLFragments/TitleAuthorsTemplate.xml');
-                let xmlTitleAuthor = getFileContent('../../OOXMLFragments/TitleAuthorTemplate.xml');
+                xmlTitleAuthors = getFileContent(_baseDIR + 'OOXMLFragments/TitleAuthorsTemplate.xml');
+                let xmlTitleAuthor = getFileContent(_baseDIR + 'OOXMLFragments/TitleAuthorTemplate.xml');
                 xmlTitleAuthor = String.format(xmlTitleAuthor, authorsData[0].fullName, authorsData[0].title);
                 xmlTitleAuthors = String.format(xmlTitleAuthors, xmlTitleAuthor + xmlTitleAuthor);
 
