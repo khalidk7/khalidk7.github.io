@@ -57,6 +57,10 @@
             $('#btnNewCRSReport').click(onaddOpenDoc);
             
             $('#btnAddAuthors').click(openInsertAuthorsDialog);
+            $('#btnAddCurrentAuthor').click(loadLoggedOnUser);
+
+            
+
 //            $('#btnAddAuthors').click(addAuthors);
             //insertStartingDoc();
             //addAuthors();
@@ -73,6 +77,12 @@
             $('#btnStyleHeading3').bind('click', { styleName: 'Heading 3' }, setRangeStyle);
             $('#btnStyleHeading4').bind('click', { styleName: 'Heading 4' }, setRangeStyle);
 
+            $('#btnSubmitToStaging').click(submitToStaging);
+            $('#btnValidate').click(validate);
+
+            //onaddOpenDoc();
+            //addLoggedOnUser();
+            
             // First, checks if it isn't implemented yet.
             if (!String.prototype.format) {
                 String.prototype.format = function () {
@@ -90,6 +100,88 @@
         });
     };
 
+
+function loadLoggedOnUser() {
+
+/*
+    $.ajax({
+        url: 'https://reqres.in/api/users/2',
+        type: "get", //send it through get method
+        data: null,
+        crossDomain: true,
+        success: function (response) {
+            //Do Something
+            print(response);
+        },
+        error: function (xhr) {
+            //Do Something to handle error
+        }
+    });
+    */
+
+
+    $.ajax({
+        url: 'https://appdev63.appdev.crsdnet.lctl.gov:8211/AuthoringWS/Person.asmx/GetAuthorByName',
+        type: "get", //send it through get method
+        data: { "userName": "kkhasawinah" },
+        dataType: "xml",
+        crossDomain: true,
+        success: function (data) {
+            //Do Something
+            var author = $(data).find("Author");
+
+            var currentAuthor = {
+                "authors": [
+                    {
+                        "OUA": author.find("OUA").text(),
+                        "fullName": author.find("FullName").text(),
+                        "phone": author.find("PhoneNumber").text(),
+                        "email": author.find("EmailAddress").text(),
+                        "title": author.find("Title").text(),
+                        "isCoordinator": false
+                    }
+                ],
+                "displayText": ""
+            };
+
+
+            showNotification("Inserting Authors");
+            addAuthors6(currentAuthor.authors);
+
+
+            console.log(currentAuthor);
+        },
+        error: function (xhr, status, error) {
+            console.log(error);
+            handleError(error);
+            //Do Something to handle error
+        }
+    });
+
+
+
+}
+
+function addLoggedOnUser() {
+    currentAuthor = {
+        "authors": [
+            {
+                "OUA": 323432,
+                "fullName": "Khalid Khasawinah",
+                "phone": "7-3859",
+                "email": "kkhasawinah@crs.loc.gov",
+                "title": "Software Engineer",
+                "isCoordinator": false
+            }
+        ],
+        "displayText": ""
+    };
+
+
+    showNotification("Inserting Authors");
+    addAuthors6(currentAuthor.authors);
+
+}
 
     // Display notifications in message banner at the top of the task pane.
     function showNotification(content) {
@@ -172,6 +264,8 @@ function insertCRSRef(crsProduct, displayText) {
 
 
 
+
+
 function insertLISRef(billType, billNum, congressYear) {
     Word.run(function (context) {
 
@@ -182,37 +276,135 @@ function insertLISRef(billType, billNum, congressYear) {
         // Create a proxy range object for the selection.
         var range = thisDocument.getSelection();
 
-        var cc = range.insertContentControl();
-        cc.tag = "LISRef";
-        cc.title = "LISRef";
+        context.load(range);
+        //context.load(range, { select: 'highlightColor', expand: 'font' });
 
-        cc.insertText('H. R. ' + billNum, 'Replace');
-        cc.cannotEdit = true;
-
-        var rangeAfter = cc.getRange("After");
-        rangeAfter.select();
-        //            cc.select("End");
-
-        // Synchronize the document state by executing the queued commands,
-        // and return a promise to indicate task completion.
         return context.sync().then(function () {
+            var cc = range.insertContentControl();
+            cc.tag = "LISRef";
+            cc.title = "LISRef";
 
-            //       var ccRange = cc.getRange();
-            //                ccRange.insertText('H. R. 14', Word.InsertLocation.start);
-            //            ccRange.insertText('H. R. 14', Word.InsertLocation.end);
-            //            ccRange.insertText('H. R. 14', Word.InsertLocation.before);
-            //                ccRange.insertText('H. R. 14', Word.InsertLocation.after);
-            console.log('Inserted LIS Ref.');
-        });
-    })
-        .catch(function (error) {
-            console.log('Error: ' + JSON.stringify(error));
-            if (error instanceof OfficeExtension.Error) {
-                console.log('Debug info: ' + JSON.stringify(error.debugInfo));
-            }
-        });
+            cc.insertText('H. R. ' + billNum, 'Replace');
+            
+            var currentRange = cc.getRange("Content");
+            currentRange.font.highlightColor = null;
+            cc.cannotEdit = true;
+            var rangeAfter = cc.getRange("After");
+            rangeAfter.select();
+
+        })
+            //.then(context.sync)
+            .then(function () {
+                //cc.cannotEdit = false;
+                handleSuccess("Successfully Inserted LIS Ref.");
+                console.log('Inserted LIS Ref.');
+            })
+            .catch(function (error) {
+                handleError(error);
+            })
+    });
 }
 
+
+
+function validate() {
+
+    Word.run(function (ctx) {
+        var success = false;
+        // Queue a command to get a content control that has the tag of "customer". 
+        // Create a proxy content controls collection object.
+        // Queue a command to search the document and ignore punctuation.
+        var searchResults = ctx.document.body.search('[Hh]. @[Rr]. @[0123456789]{1,}', { matchWildcards: true });
+
+        // Queue a command to load the search results and get the font property values.
+        ctx.load(searchResults, 'parentContentControlOrNullObject');
+
+        var countInValid = 0;
+        // Synchronize the document state by executing the queued commands,
+        // and returning a promise to indicate task completion.             
+        return ctx.sync().then(function () {
+            console.log('Found count: ' + searchResults.items.length);
+
+            // Queue a set of commands to change the font for each found item.
+
+            for (var i = 0; i < searchResults.items.length; i++) {
+                //searchResults.items[i].getRange("Content").select();
+                var parent = searchResults.items[i].parentContentControlOrNullObject;
+
+                if (parent.tag != "LISRef") {
+                    searchResults.items[i].font.highlightColor = '#FE7F9C'; //Watermelon
+                    countInValid++;
+                }
+  //              searchResults.items[i].font.bold = true;
+            }
+
+        })
+            .then(ctx.sync)
+            .then(function () {
+                // if (success)
+                if (countInValid)
+                    handleSuccess('Found  ' + countInValid + ' untagged LIS refs.');
+                else
+                    handleSuccess('No untagged LIS validation errors.')
+            })
+            .catch(function (error) {
+                handleError(error);
+            })
+    });
+
+}
+
+function submitToStaging() {
+
+    Word.run(function (ctx) {
+        // Queue a command to get a content control that has the tag of "customer". 
+        // Create a proxy content controls collection object.
+        var ccs = ctx.document.contentControls.getByTag("Title");
+
+        // Queue a command to load the text and font property on all of the content control 
+        // objects in the content control collection.            
+        //ctx.load(ccs, { select: 'text, tag, contentControls, Range, cannotEdit, cannotDelete', expand: 'font,contentControls, Range' });
+        ctx.load(ccs)
+
+        // Synchronize the document state by executing the queued commands,
+        // and returning a promise to indicate task completion.             
+        return ctx.sync().then(function () {
+
+
+            if (ccs.items.length == 0) {
+                throw new Error('Title content control not found!');
+            }
+            else if (ccs.items[0].text.trim() == "") {
+                throw new Error('Title cannot be empty!');
+            }
+        })
+            .then(function () {
+
+                ccs = ctx.document.contentControls.getByTag("TitleAuthors");
+
+                // Queue a command to load the text and font property on all of the content control 
+                // objects in the content control collection.            
+                //ctx.load(ccs, { select: 'text, tag, contentControls, Range, cannotEdit, cannotDelete', expand: 'font,contentControls, Range' });
+                ctx.load(ccs)
+            })
+            .then(ctx.sync)
+            .then(function () {
+                if (ccs.items.length == 0) {
+                    throw new Error('TitleAuthors content control not found!');
+                }
+                else if (ccs.items[0].text.trim() == "") {
+                    throw new Error('No authors found!');
+                }
+            })
+            .then(function () {
+                handleSuccess("Validated successfully but s2s not implemented yet.");
+            })
+            .catch(function (error) {
+                handleError(error);
+            })
+    });
+
+}
 
 function writeContent(fileName) {
 

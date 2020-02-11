@@ -96,6 +96,7 @@ function openCRSRefDialog() {
 }
 
 function openInsertAuthorsDialog() {
+    //loadLoggedOnUser();
     Office.context.ui.displayDialogAsync(_baseURL + "/DialogAuthors.html",
         { height: 50, width: 33 }, dialogCallback);
 }
