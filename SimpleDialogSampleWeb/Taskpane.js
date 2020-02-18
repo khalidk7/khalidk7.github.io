@@ -145,9 +145,9 @@ function loadLoggedOnUser() {
             };
 
 
-            showNotification("Inserting Authors");
-            addAuthors6(currentAuthor.authors);
-
+            showNotification("Inserting Author text");
+            //            addAuthors6(currentAuthor.authors);
+            insertTextAtSelection(currentAuthor.authors[0].fullName);
 
             console.log(currentAuthor);
         },
@@ -191,7 +191,7 @@ function addLoggedOnUser() {
     }
 
 
-function insertEmersonQuoteAtSelection() {
+function insertTextAtSelection(insertText) {
 
     Word.run(function (context) {
 
@@ -203,12 +203,12 @@ function insertEmersonQuoteAtSelection() {
         var range = thisDocument.getSelection();
 
         // Queue a command to replace the selected text.
-        range.insertText('"Hitch your wagon to a star."\n', Word.InsertLocation.replace);
+        range.insertText(insertText + '\n', Word.InsertLocation.replace);
 
         // Synchronize the document state by executing the queued commands,
         // and return a promise to indicate task completion.
         return context.sync().then(function () {
-            console.log('Added a quote from Ralph Waldo Emerson.');
+            console.log('Added text.');
         });
     })
         .catch(function (error) {
