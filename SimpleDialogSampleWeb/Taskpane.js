@@ -151,9 +151,9 @@ function loadLoggedOnUser() {
 
             console.log(currentAuthor);
         },
-        error: function (xhr, status, error) {
-            console.log(error);
-            handleError(error);
+        error: function (error) {
+            console.log(JSON.stringify(error));
+            handleError(JSON.stringify(error));
             //Do Something to handle error
         }
     });
